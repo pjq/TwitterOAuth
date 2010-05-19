@@ -34,7 +34,7 @@ public class TwitterOAuth extends Activity {
 		setContentView(R.layout.main);
 
 		Log.i(tag, "onCreate");
-		//setProxy();
+		setProxy();
 		consumer = new DefaultOAuthConsumer(CONSUMER_KEY, CONSUMER_SECRET);
 
 		provider = new DefaultOAuthProvider(
@@ -66,7 +66,7 @@ public class TwitterOAuth extends Activity {
 	
 	public void setProxy() {
 		Log.i("MainActivity", "setProxy");
-		System.getProperties().setProperty("http.proxyHost", "10.85.40.153");
+		System.getProperties().setProperty("http.proxyHost", "192.168.0.160");
 		System.getProperties().setProperty("http.proxyPort", "8000");
 	}
 
